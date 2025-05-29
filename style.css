@@ -246,15 +246,13 @@ justify-content: center;
 }
 
 .item2{
-
-  width: 100%;
+  width: 250%;
   height: auto;
   border-radius: 30px;
   object-fit: cover;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  display: block;
-  margin: 0 auto;
 }
+
 
 /* Botón del carrito */
 #verCarrito {
@@ -592,7 +590,16 @@ footer {
     margin: 0 auto;
   }
 
-  .item2 {
+.item2 {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+  /*.item2 {
     width: 100%;
     max-width: 100%;
     height: auto;
@@ -601,7 +608,7 @@ footer {
     border-radius: 20px;
     object-fit: cover;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  }
+  }*/
 
   ul {
     margin: 10px 0;
