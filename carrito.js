@@ -98,29 +98,29 @@ document.addEventListener("DOMContentLoaded", function () {
     actualizarCarrito();
 
     // Limpiar el contenedor de opciones de pago si existe
-const opcionesPago = document.getElementById("opciones-pago");
-if (opcionesPago) {
-  opcionesPago.innerHTML = "";
+    const opcionesPago = document.getElementById("opciones-pago");
+    if (opcionesPago) {
+        opcionesPago.innerHTML = "";
 
-  if (carrito.length > 0) {
-    const linkPago = document.createElement("a");
-    linkPago.href = "https://mpago.la/2tkYb2k"; // tu link real de Mercado Pago
-    linkPago.target = "_blank";
+        if (carrito.length > 0) {
+            const linkPago = document.createElement("a");
+            linkPago.href = "https://www.mercadopago.com.ar/cuenta?matt_tool=13868572&utm_source=google&utm_medium=search&gad_source=1&gad_campaignid=19024272361&gbraid=0AAAAACuOqt_p-GUpoSzOfcNZDze3G8VNz&gclid=CjwKCAjw6NrBBhB6EiwAvnT_rnkCA61ih9qKSqRTfA2xTU-qXm8TK0gPpEL5gVYFkTv12QV3_VEWcRoCFjEQAvD_BwE"; // tu link real de Mercado Pago
+            linkPago.target = "_blank";
 
-    const boton = document.createElement("button");
-    boton.textContent = "Pagar con Mercado Pago";
-    boton.style.backgroundColor = "#9b59b6";
-    boton.style.color = "white";
-    boton.style.padding = "10px 20px";
-    boton.style.border = "none";
-    boton.style.borderRadius = "10px";
-    boton.style.fontSize = "1rem";
-    boton.style.cursor = "pointer";
-    boton.style.marginTop = "20px";
+            const boton = document.createElement("button");
+            boton.textContent = "Pagar con Mercado Pago";
+            boton.style.backgroundColor = "#ee82ee";
+            boton.style.color = "white";
+            boton.style.padding = "10px 20px";
+            boton.style.border = "none";
+            boton.style.borderRadius = "10px";
+            boton.style.fontSize = "1rem";
+            boton.style.cursor = "pointer";
+            boton.style.marginTop = "20px";
 
-    linkPago.appendChild(boton);
-    opcionesPago.appendChild(linkPago);
-  }
-}
+            linkPago.appendChild(boton);
+            opcionesPago.appendChild(linkPago);
+        }
+    }
 
 });
