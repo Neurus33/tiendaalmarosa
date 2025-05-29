@@ -518,10 +518,18 @@ footer {
 }
 
 /* Móviles pequeños */
+/* Móviles pequeños */
 @media (max-width: 480px) {
   h1 {
     font-size: 26px;
     text-shadow: 3px 3px 3px black, 5px 1px 5px violet;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    padding: 0 10px;
+    line-height: 1.4;
+    text-align: center;
   }
 
   .grid img {
@@ -539,6 +547,14 @@ footer {
   #verCarrito {
     font-size: 0.8rem;
     padding: 6px 10px;
+    top: 10px;
+    right: 10px;
+  }
+
+  #carrito {
+    width: 95%;
+    right: 2.5%;
+    top: 60px;
   }
 
   #carrito button {
@@ -556,51 +572,16 @@ footer {
     font-size: 0.9rem;
   }
 
-  .campo input, .campo textarea {
+  .campo input,
+  .campo textarea {
     font-size: 0.9rem;
   }
-}
-
-@media (max-width: 480px) {
-  h2 {
-    font-size: 1.3rem;
-    padding: 0 10px;
-    line-height: 1.4;
-    text-align: center;
-  }
-
-  .item2 {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  border-radius: 30px;
-  object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
 
   .container {
-    margin: 20px 10px;
-    padding: 20px;
+    padding: 10px;
+    margin: 10px;
     border-radius: 20px;
-  }
-
-  ul {
-    margin: 10px;
     flex-direction: column;
-  }
-
-  li {
-    margin: 10px 0;
-  }
-
-  li a {
-    font-size: 1rem;
-    padding: 10px;
-  }
-  .container {
-    padding: 10px;
-    margin: 10px;
   }
 
   .galery {
@@ -618,19 +599,14 @@ footer {
     display: block;
     margin: 0 auto;
     border-radius: 20px;
-  }
-
-  h2 {
-    font-size: 1.2rem;
-    padding: 0 10px;
-    line-height: 1.4;
-    text-align: center;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   }
 
   ul {
-    flex-direction: column;
     margin: 10px 0;
     padding: 0;
+    flex-direction: column;
   }
 
   li {
@@ -642,4 +618,5 @@ footer {
     padding: 12px;
   }
 }
+
 
