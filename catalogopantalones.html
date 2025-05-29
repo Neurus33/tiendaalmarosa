@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo Pantalones</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./carrito.js">
+    <link rel="shortcut icon" href="./rosa.ico.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&display=swap" rel="stylesheet">
+</head>
+
+<body class="page-pantalones">
+
+    <!-- Botón flotante para abrir el carrito -->
+    <button id="verCarrito" style="position: fixed; top: 20px; right: 20px; z-index: 999;">
+        🛒 Carrito (<span id="cart-count">0</span>)
+    </button>
+
+    <!-- Contenedor del carrito -->
+    <div id="carrito"
+        style="display: none; position: fixed; top: 70px; right: 20px; background: #fff; border: 1px solid #ccc; padding: 10px; width: 300px; z-index: 999;">
+        <h3>Carrito de Compras</h3>
+        <ul id="lista-carrito"></ul>
+        <p>Total: $<span id="total">0</span></p>
+        <button id="vaciarCarrito">Vaciar Carrito</button>
+        <!-- Opciones de pago -->
+        <div id="opciones-pago" style="margin-top: 15px;">
+            <h4>Seleccionar método de pago:</h4>
+            <label>
+                <input type="radio" name="metodo-pago" value="Transferencia" checked>
+                Transferencia bancaria
+            </label><br>
+            <label>
+                <input type="radio" name="metodo-pago" value="Tarjeta">
+                Tarjeta de crédito/débito
+            </label><br><br>
+            <button onclick="confirmarCompra()">Confirmar Compra</button>
+        </div>
+        <button id="cerrarCarrito">Cerrar</button>
+    </div>
+<h1 class="titulo">Alma Rosa</h1>
+    <header>
+        <nav>
+            <ul>
+               <li><a href="./index.html">Home</a></li>
+                <li><a href="./ropa.html">Catalogo</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h2>Catálogo de Pantalones</h2>
+
+    <div class="container">
+
+        <div class="items">
+            <div class="info"><img class="almarosa" src="./assets/img/pantalon1.jpg">
+                <p class="descripcion">Jeans Gastado</p>
+                <p>Talle : 38</p>
+                <span class="precio">$28.000</span>
+                <button>Agregar al Carrito</button>
+            </div>
+        </div>
+
+        <div class="items">
+            <div class="info"><img class="almarosa" src="./assets/img/pantalon2.jpg">
+                <p class="descripcion">Jeans Gastado Negro</p>
+                <p>Talle: 38 - 42</p>
+                <span class="precio">$26.000</span>
+                <button>Agregar al Carrito</button>
+            </div>
+        </div>
+
+        <div class="items">
+            <div class="info"><img class="almarosa" src="./assets/img/pantalon3.jpg">
+                <p class="descripcion">Pantalon Cargo</p>
+                <p>Talle: 38 - 42</p>
+                <span class="precio">$27.500</span>
+                <button>Agregar al Carrito</button>
+            </div>
+        </div>
+
+        <div class="items">
+            <div class="info"><img class="almarosa" src="./assets/img/pantalon4.jpg">
+                <p class="descripcion">Pantalon de Vestir</p>
+                <p>Talle: 39</p>
+                <span class="precio">$29.000</span>
+                <button>Agregar al Carrito</button>
+            </div>
+        </div>
+
+        <div class="items">
+            <div class="info"><img class="almarosa" src="./assets/img/pantalon5.jpg">
+                <p class="descripcion">Pantalon a Rayas</p>
+                <p>Talle: 40</p>
+                <span class="precio">$18.000</span>
+                <button>Agregar al Carrito</button>
+            </div>
+        </div>
+
+        <div class="items">
+            <div class="info"><img class="almarosa" src="./assets/img/pantalon6.jpg">
+                <p class="descripcion">Pantalon Cargo Violet</p>
+                <p>Talle: 38 - 42 - 46</p>
+                <span class="precio">$35.000</span>
+                <button>Agregar al Carrito</button>
+            </div>
+        </div>
+
+        <div class="items">
+            <div class="info"><img class="almarosa" src="./assets/img/pantalon7.jpg">
+                <p class="descripcion">Pantalon Joggin</p>
+                <p>Tela: Algodon Talle: 40</p>
+                <span class="precio">$27.000</span>
+                <button>Agregar al Carrito</button>
+            </div>
+        </div>
+
+        <div class="items">
+            <div class="info"><img class="almarosa" src="./assets/img/pantalon8.jpg">
+                <p class="descripcion">Pantalon Joggin Mariposas</p>
+                <p>Tela: Algodon Talle: 39</p>
+                <span class="precio">$27.000</span>
+                <button>Agregar al Carrito</button>
+            </div>
+        </div>
+
+    </div>
+
+   
+
+</body>
+<!-- Código JavaScript -->
+    <script src="./carrito.js"></script>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Carteras</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./carrito.js">
+    <link rel="shortcut icon" href="./rosa.ico.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&display=swap" rel="stylesheet">
+</head>
+
+<body class="page-carteras">
+
+    <!-- Botón flotante para abrir el carrito -->
+    <button id="verCarrito" style="position: fixed; top: 20px; right: 20px; z-index: 999;">
+        🛒 Carrito (<span id="cart-count">0</span>)
+    </button>
+
+    <!-- Contenedor del carrito -->
+    <div id="carrito"
+        style="display: none; position: fixed; top: 70px; right: 20px; background: #fff; border: 1px solid #ccc; padding: 10px; width: 300px; z-index: 999;">
+        <h3>Carrito de Compras</h3>
+        <ul id="lista-carrito"></ul>
+        <p>Total: $<span id="total">0</span></p>
+        <button id="vaciarCarrito">Vaciar Carrito</button>
+
+        <!-- Opciones de pago -->
+        <div id="opciones-pago" style="margin-top: 15px;">
+            <h4>Seleccionar método de pago:</h4>
+            <label>
+                <input type="radio" name="metodo-pago" value="transferencia" checked>
+                Transferencia bancaria
+            </label><br>
+            <label>
+                <input type="radio" name="metodo-pago" value="tarjeta">
+                Tarjeta de crédito/débito
+            </label><br><br>
+            <button onclick="confirmarCompra()">Confirmar Compra</button>
+        </div>
+        <button id="cerrarCarrito">Cerrar</button>
+    </div>
+<h1 class="titulo">Alma Rosa</h1>
+    <header>
+        <nav>
+            <ul>
+               <li><a href="./index.html">Home</a></li>
+                <li><a href="./ropa.html">Catalogo</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h2>Catálogo de Carteras</h2>
+
+    <div class="contenedor1">
+        <div class="items">
+            <div class="info">
+                <img class="almarosa" src="./assets/img/cartera1.jpg" alt="cartera 1">
+                <p class="descripcion">Cartera de cuero genuino negro</p>
+                <span class="precio">$33.000</span>
+                <button>Agregar al Carrito</button>
+            </div>
+        </div>
+        <div class="items">
+            <div class="info">
+                <img src="./assets/img/cartera2.jpg" class="almarosa" alt="cartera 2">
+                <p class="descripcion">Cartera de cuero ecológico</p>
+                <span class="precio">$15.000</span>
+                <button>Agregar al Carrito</button>
+            </div>
+        </div>
+        <div class="items">
+            <div class="info">
+                <img src="./assets/img/cartera3.jpg" class="almarosa" alt="cartera 3">
+                <p class="descripcion">Cartera de vestir con perlas</p>
+                <span class="precio">$43.000</span>
+                <button>Agregar al Carrito</button>
+            </div>
+        </div>
+        <div class="items">
+            <div class="info">
+                <img src="./assets/img/cartera4.jpg" class="almarosa" alt="cartera 4">
+                <p class="descripcion">Cartera con tapa a cuadros</p>
+                <span class="precio">$35.000</span>
+                <button>Agregar al Carrito</button>
+            </div>
+        </div>
+        <div class="items">
+            <div class="info">
+                <img src="./assets/img/cartera5.jpg" class="almarosa" alt="cartera 5">
+                <p class="descripcion">Cartera eco cuero rosa</p>
+                <span class="precio">$28.000</span>
+                <button>Agregar al Carrito</button>
+            </div>
+        </div>
+        <div class="items">
+            <div class="info">
+                <img src="./assets/img/cartera6.jpg" class="almarosa" alt="cartera 6">
+                <p class="descripcion">Cartera de vestir marrón</p>
+                <span class="precio">$55.000almarosa
+                <button>Agregar al Carrito</button>
+            </div>
+        </div>
+        <div class="items">
+            <div class="info">
+                <img src="./assets/img/cartera7.jpg" class="almarosa" alt="cartera 7">
+                <p class="descripcion">Cartera cuero aqua</p>
+                <span class="precio">$70.000</span>
+                <button>Agregar al Carrito</button>
+            </div>
+        </div>
+        <div class="items">
+            <div class="info">
+                <img src="./assets/img/cartera8.jpg" class="almarosa" alt="cartera 8">
+                <p class="descripcion">Cartera eco cuero</p>
+                <span class="precio">$55.000</span>
+                <button>Agregar al Carrito</button>
+            </div>
+        </div>
+    </div>
+
+   >
+</body>
+
+</html>
+<!-- Código JavaScript -->
+    <script src="./carrito.js"></script>
+</html>

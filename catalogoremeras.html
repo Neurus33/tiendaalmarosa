@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Remeras</title>
+    <link rel="stylesheet" href="./carrito.js">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./rosa.ico.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&display=swap" rel="stylesheet">
+</head>
+
+<body class="page-remeras">
+    <!-- Botón flotante para abrir el carrito -->
+    <button id="verCarrito" style="position: fixed; top: 20px; right: 20px; z-index: 999;">
+        🛒 Carrito (<span id="cart-count">0</span>)
+    </button>
+
+    <!-- Contenedor del carrito -->
+    <div id="carrito"
+        style="display: none; position: fixed; top: 70px; right: 20px; background: #fff; border: 1px solid #ccc; padding: 10px; width: 300px; z-index: 999;">
+        <h3>Carrito de compras</h3>
+        <ul id="lista-carrito"></ul>
+        <p>Total: $<span id="total">0</span></p>
+        <button id="vaciarCarrito">Vaciar carrito</button>
+        <div id="opciones-pago" style="margin-top: 15px;">
+            <h4>Seleccionar método de pago:</h4>
+            <label>
+                <input type="radio" name="metodo-pago" value="transferencia" checked>
+                Transferencia bancaria
+            </label><br>
+            <label>
+                <input type="radio" name="metodo-pago" value="tarjeta">
+                Tarjeta de crédito/débito
+            </label><br><br>
+            <button onclick="confirmarCompra()">Confirmar compra</button>
+        </div>
+        <button id="cerrarCarrito">Cerrar</button>
+    </div>
+
+    <h1 class="titulo">Alma Rosa</h1>
+    <header>
+        <nav>
+            <ul>
+               <li><a href="./index.html">Home</a></li>
+                <li><a href="./ropa.html">Catalogo</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h2>Catálogo de Remeras</h2>
+
+
+    <div class="container">
+
+        <div class="items">
+            <div class="info"><img src="./assets/img/remera1.jpg" class="almarosa">
+                <p class="descripcion">Remera Love</p>
+                <p>Tela: algodón | Talle: L, XL</p>
+                <span class="precio">$8.000</span>
+                <button>Agregar al carrito</button>
+            </div>
+        </div>
+
+        <div class="items">
+            <div class="info"><img src="./assets/img/remera2.jpg" class="almarosa">
+                <p class="descripcion">Remera cielo nocturno</p>
+                <p>Tela: algodón | Talle: L, XL</p>
+                <span class="precio">$6.000</span>
+                <button>Agregar al carrito</button>
+            </div>
+        </div>
+
+        <div class="items">
+            <div class="info"><img src="./assets/img/remera3.jpg" class="almarosa">
+                <p class="descripcion">Remera cherry</p>
+                <p>Tela: algodón | Talle: XL, L</p>
+                <span class="precio">$7.500</span>
+                <button>Agregar al carrito</button>
+            </div>
+        </div>
+
+        <div class="items">
+            <div class="info"><img src="./assets/img/remera5.jpg" class="almarosa">
+                <p class="descripcion">Remera negra Snoopi</p>
+                <p>Tela: poliéster | Talle: XL, L</p>
+                <span class="precio">$9.000</span>
+                <button>Agregar al carrito</button>
+            </div>
+        </div>
+
+        <div class="items">
+            <div class="info"><img src="./assets/img/remera6.jpg" class="almarosa">
+                <p class="descripcion">Remera Noperfect</p>
+                <p>Tela: algodón | Talle: L</p>
+                <span class="precio">$8.000</span>
+                <button>Agregar al carrito</button>
+            </div>
+        </div>
+
+        <div class="items">
+            <div class="info"><img src="./assets/img/remera7.jpg" class="almarosa">
+                <p class="descripcion">Remera de algodón</p>
+                <p>Talle: Único</p>
+                <span class="precio">$5.000</span>
+                <button>Agregar al carrito</button>
+            </div>
+        </div>
+
+        <div class="items">
+            <div class="info"><img src="./assets/img/remera8.jpg" class="almarosa">
+                <p class="descripcion">Remera Love</p>
+                <p>Tela: algodón | Talle: XL</p>
+                <span class="precio">$7.000</span>
+                <button>Agregar al carrito</button>
+            </div>
+        </div>
+
+        <div class="items">
+            <div class="info"><img src="./assets/img/remera4.jpg" class="almarosa">
+                <p class="descripcion">Remera Love Rosa</p>
+                <p>Tela: algodón | Talle: Único</p>
+                <span class="precio">$7.500</span>
+                <button>Agregar al carrito</button>
+            </div>
+        </div>
+
+    </div>
+
+    
+</body>
+<!-- Código JavaScript -->
+    <script src="./carrito.js"></script>
+</html>

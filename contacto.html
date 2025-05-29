@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Alma Rosa</title>
+    <link rel="shortcut icon" href="./rosa.ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&display=swap" rel="stylesheet">
+</head>
+
+<body class="page-contacto">
+    <h1>Alma Rosa</h1>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./ropa.html">Catálogo</a></li>
+                <li><a class="active" href="./contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contacto">
+        <h2>Contacto</h2>
+        <p>Podés escribirnos o seguirnos en redes sociales:</p>
+
+        <div class="redes">
+            <a href="https://www.facebook.com/tu-pagina" target="_blank">
+                <img src="./assets/img/facebook.ico.png" alt="Facebook"> 
+            </a>
+
+            <a href="https://www.instagram.com/tu-pagina" target="_blank">
+                <img src="./assets/img/instagra.ico.png" alt="Instagram">
+            </a>  
+        </div>
+
+        <form class="formulario">
+            <h3>Escribinos tu consulta</h3>
+
+            <div class="campo">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+            </div>
+
+            <div class="campo">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="tu@correo.com" required>
+            </div>
+
+            <div class="campo">
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribí tu mensaje aquí..." required></textarea>
+            </div>
+
+            <div class="boton-contenedor">
+                <button type="submit">Enviar Mensaje</button>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        Derechos Reservados &copy; 2025 - Alma Rosa
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,558 @@
+/* -------------------- RESET Y ESTILOS BASE -------------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url(./assets/img/chal-rosa.jpg) fixed;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 100px;
+  font-family: "Playwrite IN", serif;
+  color: rgb(70, 64, 67);
+}
+
+h1, h2, h3, ul {
+  text-align: center;
+}
+
+h1 {
+  font-size: 50px;
+  color: rgb(238, 176, 217);
+  text-shadow: 9px 9px 8px black, 25px 1px 18px violet, 10px 20px 30px violet;
+  margin-top: 15px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 30px 0;
+}
+
+hr {
+  display: none;
+}
+
+ul {
+  display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: url(./assets/img/plumas-rosas.jpg) fixed;
+    margin: 0 50px 10px;
+    border-radius: 10px;
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+li a {
+  display: block;
+  padding: 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 10px;
+  color: rgb(8, 5, 7);
+}
+
+nav li a:hover {
+  color: aliceblue;
+}
+
+.active {
+  background-color: rgb(231, 147, 220);
+}
+
+footer {
+  background: url(./assets/img/plumas-rosas.jpg) fixed;
+  background-color: #f8d8e2;
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
+  font-size: 0.9rem;
+  border-radius: 10px;
+}
+
+/* -------------------- COMPONENTES PRINCIPALES -------------------- */
+/* Contenedor principal con fondo */
+.container{
+    margin: 50px;
+    padding: 50px;
+    background: url(./assets/img/plumas-rosas.jpg) fixed;
+    background-size: cover;
+    border-radius: 30px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+
+
+/*ROPA CATALOGO*/
+.contenedor1{
+    margin: 50px;
+    padding: 50px;
+    background: url(./assets/img/plumas-rosas.jpg) fixed;
+    background-size: cover;
+    border-radius: 30px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+
+.almarosa{
+  display: flex;
+   flex-wrap: wrap;
+    width: 150px;
+   height: 150px;
+   border-radius: 30px;
+   align-items: center;
+   text-align: center;
+   margin: auto;}
+   
+    
+    
+    .info button {
+
+   padding: 1rem;
+   width: 70%;
+   background-color: violet;
+   border: none;
+   outline: none;
+   color: #fff;
+   text-transform: uppercase;
+   font-size: 1.1rem;
+   border-radius: 5px;
+   cursor: pointer;
+   margin-top: 1px;
+   margin-left: 50px;
+   justify-items: center;
+  
+}
+
+ button:hover {
+    background-color: #d48ca3;
+}
+
+.info p {
+   text-align: center;
+   font-family: "Playwrite IN", serif;
+   font-size: 1rem;
+   color: rgb(14, 4, 14);
+align-items: center;
+   pointer-events: none;
+
+
+}
+
+
+.precio {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   text-align: center;
+   font-family: 'Courier New', Courier, monospace;
+   color: black;
+   font-size: 1.5rem;
+   
+
+}
+
+.items {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+   margin-top: 30px;
+   margin-bottom: 30px;
+   align-items: center;
+}
+
+
+.info img {
+    transition: transform 0.3s ease;
+}
+
+.info img:hover {
+    transform: scale(1.5);
+    z-index: 2;
+}
+
+
+
+
+
+/* Estilo para cada ítem de catálogo */
+.grid {
+  display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+    background:url(./assets/img/plumas-rosas.jpg);
+    border-radius: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 200px;
+    text-align: center;
+    overflow:hidden;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.grid:hover {
+    transform: scale(1.5);
+}
+
+/* Imagen */
+.grid img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 2px solid #d48ca3;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+/* Texto debajo de la imagen */
+.grid p {
+    margin: 0;
+    padding: 15px;
+    font-size: 1.2rem;
+    color: rgb(70, 64, 67);
+    font-family: 'Playwrite IN', sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+    color: rgb(70, 64, 67);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Galería */
+.galery {
+  display: grid;
+    max-width: 1100px;
+    gap: 30px;
+    justify-content: center;
+    margin: 30px auto 80px;
+    grid-template-columns: repeat(3, 1fr);
+    list-style-type: none;
+    padding: 0 20px;
+    
+}
+.item2 {
+  width: 250%;
+  height: auto;
+  border-radius: 30px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón del carrito */
+#verCarrito {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: violet;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+
+#verCarrito:hover {
+  background-color: rgb(190, 108, 190);
+}
+
+/* Carrito */
+#carrito {
+  display: none;
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  background: #ffe0f0;
+  border: 2px solid violet;
+  border-radius: 15px;
+  padding: 20px;
+  width: 300px;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#carrito h3 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  text-align: center;
+  color: violet;
+}
+
+#carrito button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  background-color: violet;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+#carrito button:hover {
+  background-color: rgb(190, 108, 190);
+}
+
+.contacto {
+    background: url(./assets/img/plumas-rosas.jpg);
+    margin: 50px;
+    padding: 30px;
+    border-radius: 30px;
+    text-align: center;
+    color: rgb(70, 64, 67);
+}
+
+.contacto p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.redes a {
+    display: inline-flex;
+    align-items: center;
+    color: rgb(197, 51, 124);
+    background-color: #f8d8e2;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 10px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.redes a:hover {
+    transform: scale(1.1);
+    background-color: #e7b7ce;
+}
+
+.redes img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+/* Formulario */
+
+p{
+    font-family: "Playwrite IN", serif;
+    font-size: 25px;
+}
+.formulario {
+    background: rgb(252, 186, 252);
+    padding: 40px;
+    border-radius: 30px;
+    max-width: 600px;
+    margin: 50px auto;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    font-family: "Playwrite IN", serif;
+}
+
+.formulario h3 {
+    text-align: center;
+    font-size: 28px;
+    color: rgb(197, 51, 124);
+    margin-bottom: 30px;
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: rgb(70, 64, 67);
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 2px solid #d48ca3;
+    border-radius: 15px;
+    background-color: #fff9fb;
+    color: rgb(70, 64, 67);
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    border-color: rgb(194, 132, 163);
+    outline: none;
+}
+
+.boton-contenedor {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.formulario button {
+    background-color: violet;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 25px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.formulario button:hover {
+    background-color: #fff8fa;
+    transform: scale(1.05);
+}
+
+footer {
+    background: url(./assets/img/plumas-rosas.jpg) fixed;
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+    background-color: #f8d8e2;
+    color: rgb(70, 64, 67);
+    font-size: 0.9rem;
+    border-radius: 10px;
+    font-family: 'Playwrite IN', sans-serif;
+}
+
+/* -------------------- MEDIA QUERIES -------------------- */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 42px;
+    text-shadow: 6px 6px 6px black, 15px 1px 12px violet;
+  }
+
+  .galery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .container, .contenedor1 {
+    margin: 20px;
+    padding: 30px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .grid {
+    width: 90%;
+  }
+
+  .grid img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* Móviles grandes y phablets */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 34px;
+    text-shadow: 4px 4px 4px black, 8px 1px 8px violet;
+  }
+
+  .galery {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .container, .contenedor1 {
+    padding: 20px;
+  }
+
+  .grid {
+    width: 100%;
+  }
+
+  .grid img {
+    width: 100px;
+    height: 100px;
+  }
+
+  #verCarrito {
+    top: 10px;
+    right: 10px;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  #carrito {
+    width: 95%;
+    right: 2.5%;
+    top: 60px;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 15px;
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 26px;
+    text-shadow: 3px 3px 3px black, 5px 1px 5px violet;
+  }
+
+  .grid img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .info button {
+    font-size: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  #verCarrito {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+
+  #carrito button {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+
+  footer {
+    font-size: 0.7rem;
+    padding: 10px;
+  }
+
+  .formulario {
+    padding: 20px;
+    font-size: 0.9rem;
+  }
+
+  .campo input, .campo textarea {
+    font-size: 0.9rem;
+  }
+}

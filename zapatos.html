@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zapatos</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./carrito.js">
+    <link rel="shortcut icon" href="rosa.ico.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&display=swap" rel="stylesheet">
+</head>
+
+<body class="page-zapatos">
+
+    <!-- Botón flotante para abrir el carrito -->
+    <button id="verCarrito" style="position: fixed; top: 20px; right: 20px; z-index: 999;">
+        🛒 Carrito (<span id="cart-count">0</span>)
+    </button>
+
+    <!-- Contenedor del carrito -->
+    <div id="carrito"
+        style="display: none; position: fixed; top: 70px; right: 20px; background: #fff; border: 1px solid #ccc; padding: 10px; width: 300px; z-index: 999;">
+        <h3>Carrito de Compras</h3>
+        <ul id="lista-carrito"></ul>
+        <p>Total: $<span id="total">0</span></p>
+        <button id="vaciarCarrito">Vaciar Carrito</button>
+        <!-- Opciones de pago -->
+        <div id="opciones-pago" style="margin-top: 15px;">
+            <h4>Seleccionar método de pago:</h4>
+            <label>
+                <input type="radio" name="metodo-pago" value="Transferencia" checked>
+                Transferencia bancaria
+            </label><br>
+            <label>
+                <input type="radio" name="metodo-pago" value="Tarjeta">
+                Tarjeta de crédito/débito
+            </label><br><br>
+            <button onclick="confirmarCompra()">Confirmar Compra</button>
+        </div>
+        <button id="cerrarCarrito">Cerrar</button>
+    </div>
+
+    <h1 class="titulo">Alma Rosa</h1>
+    <header>
+        <nav>
+            <ul>
+               <li><a href="./index.html">Home</a></li>
+                <li><a href="./ropa.html">Catalogo</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h2>Catálogo de Zapatos</h2>
+
+    <div class="container">
+        <!-- Repetido para cada producto -->
+        <div class="items">
+            <div class="info">
+                <img src="assets/img/zapatosmodelos1.jpg" alt="Panchas Cira Urbana" class="almarosa">
+                <p class="descripcion">Panchas de Mujer Cira Urbana</p>
+                <span class="precio">$13.000</span>
+                <button>Agregar al Carrito</button>
+            </div>
+        </div>
+
+        <div class="items">
+            <div class="info">
+                <img src="assets/img/zapatosmodelo2.jpg" alt="Zapatillas Urbanas" class="almarosa">
+                <p class="descripcion">Zapatillas Urbanas</p>
+                <span class="precio">$35.000</span>
+                <button>Agregar al Carrito</button>
+            </div>
+        </div>
+
+        <div class="items">
+            <div class="info">
+                <img src="assets/img/zapatomodelo3.jpg" alt="Panchas con Moño" class="almarosa">
+                <p class="descripcion">Panchas de vestir con Moño</p>
+                <span class="precio">$33.000</span>
+                <button>Agregar al Carrito</button>
+            </div>
+        </div>
+
+        <div class="items">
+            <div class="info">
+                <img src="assets/img/zapatomodelo4.jpg" alt="Zapatos con Moño" class="almarosa">
+                <p class="descripcion">Zapatos de Vestir con Moño</p>
+                <span class="precio">$25.000</span>
+                <button>Agregar al Carrito</button>
+            </div>
+        </div>
+
+        <div class="items">
+            <div class="info">
+                <img src="assets/img/zapatomodelo9.jpg" alt="Sandalias con Peluche" class="almarosa">
+                <p class="descripcion">Sandalias con Peluche</p>
+                <span class="precio">$18.000</span>
+                <button>Agregar al Carrito</button>
+            </div>
+        </div>
+
+        <div class="items">
+            <div class="info">
+                <img src="assets/img/zapatomodelo6.jpg" alt="Botas Cuero Negro" class="almarosa">
+                <p class="descripcion">Botas de Mujer Cuero Negro</p>
+                <span class="precio">$45.000</span>
+                <button>Agregar al Carrito</button>
+            </div>
+        </div>
+
+        <div class="items">
+            <div class="info">
+                <img src="assets/img/zapatomodelo7.jpg" alt="Borcegos Cuero" class="almarosa">
+                <p class="descripcion">Borcegos de Mujer Cuero Genuino</p>
+                <span class="precio">$70.000</span>
+                <button>Agregar al Carrito</button>
+            </div>
+        </div>
+
+        <div class="items">
+            <div class="info">
+                <img src="assets/img/zapatomodelo8.jpg" alt="Zapatillas con Corderito" class="almarosa">
+                <p class="descripcion">Zapatillas con Corderito</p>
+                <span class="precio">$55.000</span>
+                <button>Agregar al Carrito</button>
+            </div>
+        </div>
+    </div>
+
+   
+</body>
+<!-- Código JavaScript -->
+    <script src="./carrito.js"></script>
+</html>

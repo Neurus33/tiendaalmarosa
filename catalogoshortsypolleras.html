@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shorts y Polleras</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./carrito.js">
+    <link rel="shortcut icon" href="./rosa.ico.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&display=swap" rel="stylesheet">
+</head>
+
+<body class="page-zapatos">
+
+    <!-- Botón flotante para abrir el carrito -->
+    <button id="verCarrito" style="position: fixed; top: 20px; right: 20px; z-index: 999;">
+        🛒 Carrito (<span id="cart-count">0</span>)
+    </button>
+
+    <!-- Contenedor del carrito -->
+    <div id="carrito"
+        style="display: none; position: fixed; top: 70px; right: 20px; background: #fff; border: 1px solid #ccc; padding: 10px; width: 300px; z-index: 999;">
+        <h3>Carrito de compras</h3>
+        <ul id="lista-carrito"></ul>
+        <p>Total: $<span id="total">0</span></p>
+        <button id="vaciarCarrito">Vaciar carrito</button>
+        <!-- Opciones de pago -->
+        <div id="opciones-pago" style="margin-top: 15px;">
+            <h4>Seleccionar método de pago:</h4>
+            <label>
+                <input type="radio" name="metodo-pago" value="transferencia" checked>
+                Transferencia bancaria
+            </label><br>
+            <label>
+                <input type="radio" name="metodo-pago" value="tarjeta">
+                Tarjeta de crédito/débito
+            </label><br><br>
+            <button onclick="confirmarCompra()">Confirmar compra</button>
+        </div>
+        <button id="cerrarCarrito">Cerrar</button>
+    </div>
+
+    <h1 class="titulo">Alma Rosa</h1>
+    <header>
+        <nav>
+            <ul>
+               <li><a href="./index.html">Home</a></li>
+                <li><a href="./ropa.html">Catalogo</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h2>Catálogo de Shorts y Polleras</h2>
+
+    <div class="container">
+
+        <div class="items">
+            <div class="info"><img src="./assets/img/pollera1.jpg" class="almarosa">
+                <p class="descripcion">Pollera de jeans</p>
+                <p>Talle: 39</p>
+                <span class="precio">$15.000</span>
+                <button>Agregar al carrito</button>
+            </div>
+        </div>
+
+        <div class="items">
+            <div class="info"><img src="./assets/img/short1.jpg" class="almarosa">
+                <p class="descripcion">Shorts engomado</p>
+                <p>Talle: 39</p>
+                <span class="precio">$19.000</span>
+                <button>Agregar al carrito</button>
+            </div>
+        </div>
+
+        <div class="items">
+            <div class="info"><img src="./assets/img/pollera2.jpg" class="almarosa">
+                <p class="descripcion">Pollera tipo cargo</p>
+                <p>Talle: 38 - 39</p>
+                <span class="precio">$23.000</span>
+                <button>Agregar al carrito</button>
+            </div>
+        </div>
+
+        <div class="items">
+            <div class="info"><img src="./assets/img/short2.jpg" class="almarosa">
+                <p class="descripcion">Shorts de jeans Love</p>
+                <p>Talle: 38 - 42</p>
+                <span class="precio">$35.000</span>
+                <button>Agregar al carrito</button>
+            </div>
+        </div>
+
+        <div class="items">
+            <div class="info"><img src="./assets/img/pollera3.jpg" class="almarosa">
+                <p class="descripcion">Pollera escocesa</p>
+                <p>Talle: 40</p>
+                <span class="precio">$28.000</span>
+                <button>Agregar al carrito</button>
+            </div>
+        </div>
+
+        <div class="items">
+            <div class="info"><img src="./assets/img/short3.jpg" class="almarosa">
+                <p class="descripcion">Shorts de jeans gastado</p>
+                <p>Talle: 38 - 42</p>
+                <span class="precio">$35.000</span>
+                <button>Agregar al carrito</button>
+            </div>
+        </div>
+
+        <div class="items">
+            <div class="info"><img src="./assets/img/pollera4.jpg" class="almarosa">
+                <p class="descripcion">Pollera blanca o azul</p>
+                <p>Talle: 38</p>
+                <span class="precio">$16.000</span>
+                <button>Agregar al carrito</button>
+            </div>
+        </div>
+
+        <div class="items">
+            <div class="info"><img src="./assets/img/short4.jpg" class="almarosa">
+                <p class="descripcion">Shorts Love Jeans rosado</p>
+                <p>Talle: 38 - 40</p>
+                <span class="precio">$35.000</span>
+                <button>Agregar al carrito</button>
+            </div>
+        </div>
+
+    </div>
+
+    
+
+</body>
+
+<!-- Código JavaScript -->
+    <script src="./carrito.js"></script>
+
+</html>
