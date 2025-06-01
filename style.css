@@ -14,7 +14,10 @@ body {
   color: rgb(70, 64, 67);
 }
 
-h1, h2, h3, ul {
+h1,
+h2,
+h3,
+ul {
   text-align: center;
 }
 
@@ -35,14 +38,14 @@ hr {
 }
 
 ul {
-  display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    background: url(./assets/img/plumas-rosas.jpg) fixed;
-    margin: 0 50px 10px;
-    border-radius: 10px;
-    list-style-type: none;
-    padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: url(./assets/img/plumas-rosas.jpg) fixed;
+  margin: 0 50px 10px;
+  border-radius: 10px;
+  list-style-type: none;
+  padding: 0;
 }
 
 li {
@@ -97,94 +100,95 @@ footer {
 
 
 /*ROPA CATALOGO*/
-.contenedor1{
-    margin: 50px;
-    padding: 50px;
-    background: url(./assets/img/plumas-rosas.jpg) fixed;
-    background-size: cover;
-    border-radius: 30px;
-    display:flex;
-    flex-wrap:wrap;
-    justify-content: center;
-    gap: 30px;
-}
-
-
-.almarosa{
+.contenedor1 {
+  margin: 50px;
+  padding: 50px;
+  background: url(./assets/img/plumas-rosas.jpg) fixed;
+  background-size: cover;
+  border-radius: 30px;
   display: flex;
-   flex-wrap: wrap;
-    width: 150px;
-   height: 150px;
-   border-radius: 30px;
-   align-items: center;
-   text-align: center;
-   margin: auto;}
-   
-    
-    
-    .info button {
-
-   padding: 1rem;
-   width: 70%;
-   background-color: violet;
-   border: none;
-   outline: none;
-   color: #fff;
-   text-transform: uppercase;
-   font-size: 1.1rem;
-   border-radius: 5px;
-   cursor: pointer;
-   margin-top: 1px;
-   margin-left: 50px;
-   justify-items: center;
-  
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
 }
 
- button:hover {
-    background-color: #d48ca3;
+
+.almarosa {
+  display: flex;
+  flex-wrap: wrap;
+  width: 150px;
+  height: 150px;
+  border-radius: 30px;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+}
+
+
+
+.info button {
+
+  padding: 1rem;
+  width: 70%;
+  background-color: violet;
+  border: none;
+  outline: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1px;
+  margin-left: 50px;
+  justify-items: center;
+
+}
+
+button:hover {
+  background-color: #d48ca3;
 }
 
 .info p {
-   text-align: center;
-   font-family: "Playwrite IN", serif;
-   font-size: 1rem;
-   color: rgb(14, 4, 14);
-align-items: center;
-   pointer-events: none;
+  text-align: center;
+  font-family: "Playwrite IN", serif;
+  font-size: 1rem;
+  color: rgb(14, 4, 14);
+  align-items: center;
+  pointer-events: none;
 
 
 }
 
 
 .precio {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-   text-align: center;
-   font-family: 'Courier New', Courier, monospace;
-   color: black;
-   font-size: 1.5rem;
-   
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  color: black;
+  font-size: 1.5rem;
+
 
 }
 
 .items {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-   margin-top: 30px;
-   margin-bottom: 30px;
-   align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  align-items: center;
 }
 
 
 .info img {
-    transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .info img:hover {
-    transform: scale(1.5);
-    z-index: 2;
+  transform: scale(1.5);
+  z-index: 2;
 }
 
 
@@ -194,43 +198,43 @@ justify-content: center;
 /* Estilo para cada ítem de catálogo */
 .grid {
   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-    background:url(./assets/img/plumas-rosas.jpg);
-    border-radius: 30px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    width: 200px;
-    text-align: center;
-    overflow:hidden;
-    text-decoration: none;
-    transition: transform 0.3s ease;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: url(./assets/img/plumas-rosas.jpg);
+  border-radius: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  text-align: center;
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform 0.3s ease;
 }
 
 .grid:hover {
-    transform: scale(1.5);
+  transform: scale(1.5);
 }
 
 /* Imagen */
 .grid img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-bottom: 2px solid #d48ca3;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-bottom: 2px solid #d48ca3;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 
 /* Texto debajo de la imagen */
 .grid p {
-    margin: 0;
-    padding: 15px;
-    font-size: 1.2rem;
-    color: rgb(70, 64, 67);
-    font-family: 'Playwrite IN', sans-serif;
-    font-weight: 400;
-    cursor: pointer;
-    color: rgb(70, 64, 67);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  margin: 0;
+  padding: 15px;
+  font-size: 1.2rem;
+  color: rgb(70, 64, 67);
+  font-family: 'Playwrite IN', sans-serif;
+  font-weight: 400;
+  cursor: pointer;
+  color: rgb(70, 64, 67);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 /* Galería 
@@ -248,22 +252,26 @@ justify-content: center;
 */
 
 .galery {
-    display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
-  gap: 20px;                             /* espacio entre imágenes */
-  justify-items: center;                /* centra cada imagen en su celda */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 columnas iguales */
+  gap: 20px;
+  /* espacio entre imágenes */
+  justify-items: center;
+  /* centra cada imagen en su celda */
   padding: 20px;
   list-style: none;
 }
 
 .item2 {
- width: 100%;
+  width: 100%;
   max-width: 350px;
   height: auto;
   border-radius: 30px;
   object-fit: cover;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  display: block;}
+  display: block;
+}
 
 
 
@@ -280,7 +288,7 @@ justify-content: center;
   padding: 10px 20px;
   font-size: 1rem;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease;
 }
 
@@ -305,16 +313,18 @@ justify-content: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
   */
-  
 
- #carrito {
+
+#carrito {
   display: none;
   position: fixed;
   top: 70px;
   right: 10px;
   width: 240px;
-  max-height: 80vh; /* Limita el alto del carrito */
-  overflow-y: auto; /* ✅ Agrega scroll vertical */
+  max-height: 80vh;
+  /* Limita el alto del carrito */
+  overflow-y: auto;
+  /* ✅ Agrega scroll vertical */
   overflow-x: hidden;
   background: url(./assets/img/plumas-rosas.jpg);
   border: 1px solid #ccc;
@@ -340,7 +350,7 @@ justify-content: center;
 
 
 #lista-carrito li {
-  background:url(./assets/img/chal-rosa.jpg) fixed;
+  background: url(./assets/img/chal-rosa.jpg) fixed;
   border: 1px solid #e6a6d8;
   border-radius: 12px;
   padding: 8px 10px;
@@ -401,7 +411,8 @@ justify-content: center;
 }
 
 #opcion-banco strong {
-  color: rgb(197, 51, 124); /* destaca el título */
+  color: rgb(197, 51, 124);
+  /* destaca el título */
 }
 
 
@@ -416,43 +427,151 @@ justify-content: center;
   background-color: rgb(190, 108, 190);
 }
 
+.boton-envio {
+  margin-top: 10px;
+  background-color: rgb(190, 108, 190);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  font-family: 'Playwrite IN', sans-serif;
+}
+
+.boton-envio:hover {
+  background-color: #a020f0;
+}
+
+
+.formulario-envios {
+  background-color: #fff0f5;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 500px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Playwrite IN', sans-serif;
+  transition: all 0.4s ease;
+}
+
+.formulario-envios h2 {
+  margin-bottom: 15px;
+  color: #c71585;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.formulario-envios label {
+  display: block;
+  margin-top: 12px;
+  font-weight: 600;
+  color: #555;
+}
+
+.formulario-envios input,
+.formulario-envios select,
+.formulario-envios textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-top: 6px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+}
+
+.formulario-envios textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.formulario-envios button {
+  margin-top: 20px;
+  background-color: #c71585;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.formulario-envios button:hover {
+  background-color: #a8126b;
+}
+
+.error {
+  color: red;
+  font-size: 0.85em;
+  margin-top: 3px;
+  display: block;
+}
+
+input.error-input {
+  border: 2px solid red;
+}
+
+
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.formulario-envios {
+  animation: fadeSlideIn 0.6s ease forwards;
+}
+
+
+
+
 .contacto {
-    background: url(./assets/img/plumas-rosas.jpg);
-    margin: 50px;
-    padding: 30px;
-    border-radius: 30px;
-    text-align: center;
-    color: rgb(70, 64, 67);
+  background: url(./assets/img/plumas-rosas.jpg);
+  margin: 50px;
+  padding: 30px;
+  border-radius: 30px;
+  text-align: center;
+  color: rgb(70, 64, 67);
 }
 
 .contacto p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
 }
 
 .redes a {
-    display: inline-flex;
-    align-items: center;
-    color: rgb(197, 51, 124);
-    background-color: #f8d8e2;
-    padding: 10px 20px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    margin: 10px;
-    transition: transform 0.3s ease;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  display: inline-flex;
+  align-items: center;
+  color: rgb(197, 51, 124);
+  background-color: #f8d8e2;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin: 10px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 .redes a:hover {
-    transform: scale(1.1);
-    background-color: #e7b7ce;
+  transform: scale(1.1);
+  background-color: #e7b7ce;
 }
 
 .redes img {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
 }
 
 .fade-in {
@@ -472,6 +591,7 @@ justify-content: center;
     opacity: 0;
     transform: translateY(-15px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -483,6 +603,7 @@ justify-content: center;
     opacity: 1;
     transform: translateY(0);
   }
+
   to {
     opacity: 0;
     transform: translateY(15px);
@@ -490,96 +611,101 @@ justify-content: center;
 }
 
 
+
+
+
 /* Formulario */
 
-p{
-    font-family: "Playwrite IN", serif;
-    font-size: 25px;
+p {
+  font-family: "Playwrite IN", serif;
+  font-size: 25px;
 }
+
 .formulario {
-    background: rgb(252, 186, 252);
-    padding: 40px;
-    border-radius: 30px;
-    max-width: 600px;
-    margin: 50px auto;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    font-family: "Playwrite IN", serif;
+  background: rgb(252, 186, 252);
+  padding: 40px;
+  border-radius: 30px;
+  max-width: 600px;
+  margin: 50px auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  font-family: "Playwrite IN", serif;
 }
 
 .formulario h3 {
-    text-align: center;
-    font-size: 28px;
-    color: rgb(197, 51, 124);
-    margin-bottom: 30px;
+  text-align: center;
+  font-size: 28px;
+  color: rgb(197, 51, 124);
+  margin-bottom: 30px;
 }
 
 .campo {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .campo label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 500;
-    color: rgb(70, 64, 67);
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: rgb(70, 64, 67);
 }
 
 .campo input,
 .campo textarea {
-    width: 100%;
-    padding: 12px 15px;
-    font-size: 16px;
-    border: 2px solid #d48ca3;
-    border-radius: 15px;
-    background-color: #fff9fb;
-    color: rgb(70, 64, 67);
-    box-sizing: border-box;
-    transition: border-color 0.3s ease;
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 2px solid #d48ca3;
+  border-radius: 15px;
+  background-color: #fff9fb;
+  color: rgb(70, 64, 67);
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
 }
 
 .campo input:focus,
 .campo textarea:focus {
-    border-color: rgb(194, 132, 163);
-    outline: none;
+  border-color: rgb(194, 132, 163);
+  outline: none;
 }
 
 .boton-contenedor {
-    text-align: center;
-    margin-top: 30px;
+  text-align: center;
+  margin-top: 30px;
 }
 
 .formulario button {
-    background-color: violet;
-    border: none;
-    border-radius: 30px;
-    padding: 12px 25px;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+  background-color: violet;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 25px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .formulario button:hover {
-    background-color: #fff8fa;
-    transform: scale(1.05);
+  background-color: #fff8fa;
+  transform: scale(1.05);
 }
 
 footer {
-    background: url(./assets/img/plumas-rosas.jpg) fixed;
-    text-align: center;
-    padding: 20px;
-    margin-top: 60px;
-    background-color: #f8d8e2;
-    color: rgb(70, 64, 67);
-    font-size: 0.9rem;
-    border-radius: 10px;
-    font-family: 'Playwrite IN', sans-serif;
+  background: url(./assets/img/plumas-rosas.jpg) fixed;
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
+  background-color: #f8d8e2;
+  color: rgb(70, 64, 67);
+  font-size: 0.9rem;
+  border-radius: 10px;
+  font-family: 'Playwrite IN', sans-serif;
 }
 
 /* -------------------- MEDIA QUERIES -------------------- */
 /* Tablets (hasta 1024px) */
 @media (max-width: 1024px) {
+
   .container,
   .contenedor1 {
     flex-direction: column;
@@ -624,15 +750,15 @@ footer {
     font-size: 1.5rem;
   }
 
- .container,
-.contenedor1 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 20px;
-  padding: 30px;
-  gap: 20px;
-}
+  .container,
+  .contenedor1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding: 30px;
+    gap: 20px;
+  }
 
 
   .items {
@@ -689,6 +815,7 @@ footer {
 
 /* Celulares pequeños (hasta 480px) */
 @media (max-width: 480px) {
+
   /* Ajustar espacio para que el carrito no tape el título */
   body {
     padding-top: 60px;
@@ -696,7 +823,8 @@ footer {
 
   h1 {
     font-size: 26px;
-    margin-top: 60px; /* deja espacio para el botón flotante */
+    margin-top: 60px;
+    /* deja espacio para el botón flotante */
     text-align: center;
   }
 
@@ -764,6 +892,42 @@ footer {
   footer {
     font-size: 0.8rem;
   }
+
 }
 
+@media (max-width: 768px) {
+  .formulario-envio {
+    padding: 1rem;
+    margin: 1rem auto;
+    width: 90%;
+  }
 
+  .formulario-envio input,
+  .formulario-envio textarea,
+  .formulario-envio select,
+  .formulario-envio button {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .formulario-envio .fila {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .formulario-envio {
+    padding: 0.8rem;
+  }
+
+  .formulario-envio input,
+  .formulario-envio textarea,
+  .formulario-envio select,
+  .formulario-envio button {
+    font-size: 0.85rem;
+    padding: 0.5rem;
+  }
+}
