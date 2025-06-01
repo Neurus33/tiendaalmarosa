@@ -21,33 +21,63 @@
     </button>
 
     <!-- Contenedor del carrito -->
-    <div id="carrito"
-        style="display: none; position: fixed; top: 70px; right: 20px; background: #fff; border: 1px solid #ccc; padding: 10px; width: 300px; z-index: 999;">
+    <div id="carrito" style="display: none;">
         <h3>Carrito de Compras</h3>
         <ul id="lista-carrito"></ul>
-        <p>Total: $<span id="total">0</span></p>
+        <p class="texto-pago">Total: $<span id="total">0</span></p>
         <button id="vaciarCarrito">Vaciar Carrito</button>
+
         <!-- Opciones de pago -->
         <div id="opciones-pago" style="margin-top: 15px;">
             <h4>Seleccionar método de pago:</h4>
+
             <label>
-                <input type="radio" name="metodo-pago" value="Transferencia" checked>
-                Transferencia bancaria
+                <input type="radio" name="metodo-pago" value="mercadopago" checked>
+                Mercado Pago
             </label><br>
+
             <label>
-                <input type="radio" name="metodo-pago" value="Tarjeta">
-                Tarjeta de crédito/débito
+                <input type="radio" name="metodo-pago" value="banco">
+                Tarjeta o transferencia bancaria
             </label><br><br>
-            <button onclick="confirmarCompra()">Confirmar Compra</button>
+
+             <!-- BOTÓN Mercado Pago -->
+            <div id="opcion-mercadopago" style="display: block;">
+                <p class="texto-pago">Paga Por Mercado Pago</p>
+                <button onclick="confirmarCompra()"
+                    style="background-color: violet; color: white; border: none; padding: 12px; border-radius: 10px; width: 100%;">
+                    Pagar con Mercado Pago
+                </button>
+                <hr>
+                <p class="texto-pago">¿Ya realizaste el pago?</p>
+                <a id="whatsapp-link" href="#" target="_blank">
+                    <button
+                        style="background-color: #25D366; color: white; padding: 10px; border: none; border-radius: 10px; width: 100%;">
+                        Enviar comprobante por WhatsApp
+                    </button>
+                </a>
+            </div>
+
+            <!-- DATOS BANCARIOS -->
+            <div id="opcion-banco">
+                <strong>Datos para tarjeta o transferencia:</strong><br>
+                Banco: Banco Nación<br>
+                CBU: 0110599502000001234567<br>
+                Alias: alma.rosa.tienda<br>
+                Titular: Alma Rosa S.A.<br>
+                Enviar comprobante a: contacto@almarosa.com
+            </div>
         </div>
-        <button id="cerrarCarrito">Cerrar</button>
+
+        <button id="cerrarCarrito" style="margin-top: 10px;">Cerrar</button>
     </div>
+
 
     <h1 class="titulo">Alma Rosa</h1>
     <header>
         <nav>
             <ul>
-               <li><a href="./index.html">Home</a></li>
+                <li><a href="./index.html">Home</a></li>
                 <li><a href="./ropa.html">Catalogo</a></li>
                 <li><a href="./contacto.html">Contacto</a></li>
             </ul>
@@ -131,8 +161,9 @@
         </div>
     </div>
 
-   
+
 </body>
 <!-- Código JavaScript -->
-    <script src="./carrito.js"></script>
+<script src="./carrito.js"></script>
+
 </html>

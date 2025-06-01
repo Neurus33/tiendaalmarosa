@@ -12,6 +12,20 @@ document.addEventListener("DOMContentLoaded", function () {
     const btnVerCarrito = document.getElementById("verCarrito");
     const btnVaciarCarrito = document.getElementById("vaciarCarrito");
     const btnCerrarCarrito = document.getElementById("cerrarCarrito");
+    const linkWhatsapp = document.getElementById('whatsapp-link');
+
+    if (linkWhatsapp) {
+        linkWhatsapp.addEventListener("click", function () {
+            const totalTexto = document.getElementById("total")?.textContent || "0";
+            const nombre = prompt("Ingresá tu nombre:");
+
+            const mensaje = `Hola, te envío el comprobante de mi pago por transferencia.\nMonto: $${totalTexto}\nNombre: ${nombre}\nGracias.`;
+            const telefono = "5491112345678"; // ← cambiá esto por tu número sin espacios
+
+            const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+            linkWhatsapp.href = url;
+        });
+    }
 
     function actualizarCarrito() {
         listaCarrito.innerHTML = "";
@@ -58,15 +72,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         const metodo = metodoSeleccionado.value;
-        let mensaje = `Has seleccionado pagar por ${metodo}.`;
 
-        if (metodo === "Transferencia") {
-            mensaje += "\n\nDatos para Transferencia:\nCBU: 0000003100000001234567\nAlias: alma.rosa.shop\nTitular: Alma Rosa S.R.L.";
-        } else {
-            mensaje += "\n\nSerá redirigido al sistema de pago con tarjeta (no implementado en esta demo).";
+        if (metodo === "mercadopago") {
+           window.open("https://www.mercadopago.com.ar", "_blank");
+
+        } else if (metodo === "banco") {
+            alert("Datos para Transferencia o Tarjeta:\n\nBanco Nación\nCBU: 0110599502000001234567\nAlias: alma.rosa.tienda\nTitular: Alma Rosa S.A.\nEnviar comprobante a: contacto@almarosa.com");
         }
 
-        alert(mensaje);
         vaciarCarrito();
     };
 
@@ -84,43 +97,73 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    // Mostrar carrito con animación
     btnVerCarrito.addEventListener("click", () => {
         const visible = contenedorCarrito.style.display === "block";
-        contenedorCarrito.style.display = visible ? "none" : "block";
-        actualizarCarrito();
+
+        if (visible) {
+            contenedorCarrito.classList.remove("fade-in");
+            contenedorCarrito.classList.add("fade-out");
+
+            setTimeout(() => {
+                contenedorCarrito.style.display = "none";
+            }, 400);
+        } else {
+            contenedorCarrito.style.display = "block";
+            contenedorCarrito.classList.remove("fade-out");
+            void contenedorCarrito.offsetWidth;
+            contenedorCarrito.classList.add("fade-in");
+            actualizarCarrito();
+        }
     });
 
-    btnVaciarCarrito?.addEventListener("click", vaciarCarrito);
+    // Cerrar carrito con animación
     btnCerrarCarrito?.addEventListener("click", () => {
-        contenedorCarrito.style.display = "none";
+        contenedorCarrito.classList.remove("fade-in");
+        contenedorCarrito.classList.add("fade-out");
+
+        setTimeout(() => {
+            contenedorCarrito.style.display = "none";
+        }, 400);
+    });
+
+    // Vaciar carrito con animación suave de cierre también
+    btnVaciarCarrito?.addEventListener("click", () => {
+        vaciarCarrito();
+
+        contenedorCarrito.classList.remove("fade-in");
+        contenedorCarrito.classList.add("fade-out");
+
+        setTimeout(() => {
+            contenedorCarrito.style.display = "none";
+        }, 400);
     });
 
     actualizarCarrito();
 
-    // Limpiar el contenedor de opciones de pago si existe
-    const opcionesPago = document.getElementById("opciones-pago");
-    if (opcionesPago) {
-        opcionesPago.innerHTML = "";
+    // Mostrar/ocultar opciones de pago con animación
+    const radioMP = document.querySelector('input[value="mercadopago"]');
+    const radioBanco = document.querySelector('input[value="banco"]');
+    const divMP = document.getElementById('opcion-mercadopago');
+    const divBanco = document.getElementById('opcion-banco');
 
-        if (carrito.length > 0) {
-            const linkPago = document.createElement("a");
-            linkPago.href = "https://www.mercadopago.com.ar/cuenta?matt_tool=13868572&utm_source=google&utm_medium=search&gad_source=1&gad_campaignid=19024272361&gbraid=0AAAAACuOqt_p-GUpoSzOfcNZDze3G8VNz&gclid=CjwKCAjw6NrBBhB6EiwAvnT_rnkCA61ih9qKSqRTfA2xTU-qXm8TK0gPpEL5gVYFkTv12QV3_VEWcRoCFjEQAvD_BwE"; // tu link real de Mercado Pago
-            linkPago.target = "_blank";
-
-            const boton = document.createElement("button");
-            boton.textContent = "Pagar con Mercado Pago";
-            boton.style.backgroundColor = "#ee82ee";
-            boton.style.color = "white";
-            boton.style.padding = "10px 20px";
-            boton.style.border = "none";
-            boton.style.borderRadius = "10px";
-            boton.style.fontSize = "1rem";
-            boton.style.cursor = "pointer";
-            boton.style.marginTop = "20px";
-
-            linkPago.appendChild(boton);
-            opcionesPago.appendChild(linkPago);
+    function actualizarVistaPago() {
+        if (radioMP?.checked) {
+            divBanco.style.display = 'none';
+            divMP.style.display = 'block';
+            divMP.classList.remove("fade-transition");
+            void divMP.offsetWidth;
+            divMP.classList.add("fade-transition");
+        } else if (radioBanco?.checked) {
+            divMP.style.display = 'none';
+            divBanco.style.display = 'block';
+            divBanco.classList.remove("fade-transition");
+            void divBanco.offsetWidth;
+            divBanco.classList.add("fade-transition");
         }
     }
 
+    radioMP?.addEventListener('change', actualizarVistaPago);
+    radioBanco?.addEventListener('change', actualizarVistaPago);
+    actualizarVistaPago();
 });
