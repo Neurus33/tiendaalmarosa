@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alma Rosa | Pago</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <h1>Alma Rosa</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ropa.html">Catálogo</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <h2>Seleccioná tu método de pago</h2>
+
+    <div class="contenedor-pago">
+
+
+        <a href="https://www.mercadopago.com.ar/" target="_blank">
+            <button class="btn-mercado">Pagar con Mercado Pago</button>
+        </a>
+
+        <button class="btn-transferencia" onclick="mostrarDatosTransferencia()">Pago por Transferencia / Banco</button>
+        <a href="https://wa.me/1234567891" target="_blank">
+            <button class="btn-whatsapp">Enviar comprobante por WhatsApp</button>
+        </a>
+        <div id="datos-transferencia">
+            <h3>Datos para Transferencia:</h3>
+            <p><strong>CBU:</strong> <span>6230654811100017625037</span></p>
+            <p><strong>Alias:</strong> <span>ALMA.ROSA.BOUTIQUE</span></p>
+            <p><strong>Titular:</strong> <span>Alma Rosa Boutique</span></p>
+        </div>
+
+
+    </div>
+
+
+
+</body>
+<script>
+    function mostrarDatosTransferencia() {
+        const datos = document.getElementById("datos-transferencia");
+        datos.style.display = datos.style.display === "block" ? "none" : "block";
+    }
+</script>
+
+</html>

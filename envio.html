@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Opciones de Envío - Alma Rosa</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="envio-container">
+    <h2>¿Cómo querés recibir tu compra?</h2>
+
+    <div class="opciones-envio">
+      <label><input type="radio" name="envio" value="domicilio" /> Envío a domicilio</label>
+      <label><input type="radio" name="envio" value="retiro" /> Retiro en punto de entrega</label>
+      <label><input type="radio" name="envio" value="sin-envio" /> Sin envío (retiro en tienda)</label>
+    </div>
+
+    <form class="formulario-envio" id="formularioEnvio">
+      <div id="formDomicilio" class="oculto">
+        <input type="text" placeholder="Dirección" required />
+        <input type="text" placeholder="Ciudad" required />
+        <input type="text" placeholder="Código Postal" required />
+      </div>
+
+      <div id="formRetiro" class="oculto">
+        <select required>
+          <option value="">Seleccioná un punto de retiro</option>
+          <option value="Sucursal Centro">Sucursal Centro</option>
+          <option value="Sucursal Norte">Sucursal Norte</option>
+          <option value="Sucursal Sur">Sucursal Sur</option>
+        </select>
+      </div>
+      <a href="pagos.html">
+        <button type="button" class="btn-continuar">Continuar con la compra</button>
+      </a>
+
+    </form>
+  </div>
+
+  <script>
+    const opciones = document.querySelectorAll('input[name="envio"]');
+    const formDomicilio = document.getElementById('formDomicilio');
+    const formRetiro = document.getElementById('formRetiro');
+
+    opciones.forEach(opcion => {
+      opcion.addEventListener('change', () => {
+        formDomicilio.classList.add('oculto');
+        formRetiro.classList.add('oculto');
+
+        if (opcion.value === 'domicilio') {
+          formDomicilio.classList.remove('oculto');
+        } else if (opcion.value === 'retiro') {
+          formRetiro.classList.remove('oculto');
+        }
+      });
+    });
+
+    document.getElementById('formularioEnvio').addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('¡Datos de envío guardados! Redirigiendo al resumen de compra...');
+      window.location.href = "resumen.html";
+    });
+  </script>
+</body>
+
+</html>

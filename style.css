@@ -412,10 +412,9 @@ button:hover {
 
 #opcion-banco strong {
   color: rgb(197, 51, 124);
-  /* destaca el título */
+
 }
-
-
+*/
 #lista-carrito li button:hover {
   background-color: #cc2f4e;
 }
@@ -427,7 +426,68 @@ button:hover {
   background-color: rgb(190, 108, 190);
 }
 
-.boton-envio {
+
+.envio-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.envio-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.opciones-envio label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.formulario-envio {
+  margin-top: 20px;
+}
+
+.formulario-envio input,
+.formulario-envio select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.btn-continuar {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #ff69b4;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-continuar:hover {
+  background-color: #e0559f;
+}
+
+.oculto {
+  display: none;
+}
+
+
+
+
+/*.boton-envio {
   margin-top: 10px;
   background-color: rgb(190, 108, 190);
   color: white;
@@ -503,7 +563,7 @@ button:hover {
 .formulario-envios button:hover {
   background-color: #a8126b;
 }
-
+*/
 .error {
   color: red;
   font-size: 0.85em;
@@ -701,6 +761,167 @@ footer {
   border-radius: 10px;
   font-family: 'Playwrite IN', sans-serif;
 }
+
+.contenedor-pago {
+  margin: 50px auto;
+  padding: 50px;
+  background: url(./assets/img/plumas-rosas.jpg) fixed;
+  background-size: cover;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  max-width: 600px;
+}
+
+.contenedor-pago h2 {
+  font-family: "Playwrite IN", serif;
+  font-size: 2rem;
+  color: rgb(70, 64, 67);
+  margin-bottom: 25px;
+}
+
+.contenedor-pago button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin: 15px 0;
+  font-size: 1rem;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contenedor-pago .btn-mercado {
+  background-color: #f48ac2;
+}
+
+.contenedor-pago .btn-transferencia {
+  background-color: #fa9e00;
+}
+
+.contenedor-pago .btn-whatsapp {
+  background-color: #25d366;
+}
+
+#datos-transferencia {
+  display: none;
+  margin-top: 20px;
+  font-family: "Playwrite IN", serif;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+.opciones-pago {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin: 30px;
+  padding: 20px;
+  background: url(./assets/img/plumas-rosas.jpg) fixed;
+  border-radius: 30px;
+}
+
+
+.opciones-pago button {
+   display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #ff69b4;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+#datos-transferencia p strong {
+  font-family: "Playwrite IN", serif;
+  font-size: 1.2rem;
+}
+
+#datos-transferencia p span {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+
+.btn-mercado {
+  background-color: #f48ac2;
+}
+
+.btn-transferencia {
+  background-color: #fa9e00;
+}
+
+.btn-whatsapp {
+  background-color: #25d366;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a .btn-continuar:hover {
+  background-color: #e0559f;
+}
+
+
+/* Estilo unificado para títulos, botones y textos de pagos y envíos */
+
+.envio-container h2,
+.opciones-envio label,
+.formulario-envio input,
+.formulario-envio select,
+.formulario-envio button,
+.opciones-pago h2,
+.opciones-pago button,
+#datos-transferencia h3,
+#datos-transferencia p {
+  font-family: "Playwrite IN", serif;
+}
+
+/* Para los botones que ya existen */
+.opciones-pago button {
+  font-size: 1rem;
+}
+
+/* Para centrar h2 de pagos */
+.opciones-pago h2 {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* Elimina el subrayado de todos los links por seguridad */
+a {
+  text-decoration: none;
+}
+
+
 
 /* -------------------- MEDIA QUERIES -------------------- */
 /* Tablets (hasta 1024px) */
@@ -931,3 +1152,58 @@ footer {
     padding: 0.5rem;
   }
 }
+
+
+/* Media Queries envios */
+@media (max-width: 768px) {
+  .envio-container {
+    margin: 30px 15px;
+    padding: 15px;
+  }
+
+  .formulario-envio input,
+  .formulario-envio select {
+    font-size: 0.95rem;
+  }
+
+  .btn-continuar {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .envio-container h2 {
+    font-size: 1.2rem;
+  }
+
+  .btn-continuar {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  #datos-transferencia {
+    padding: 15px;
+    margin: 15px;
+    font-size: 0.95rem;
+  }
+
+  #datos-transferencia h3 {
+    font-size: 1.2rem;
+  }
+
+  #datos-transferencia p strong {
+    font-size: 1rem;
+  }
+
+  #datos-transferencia p span {
+    font-size: 0.95rem;
+    word-wrap: break-word;
+  }
+}
+
+
+
+
